@@ -16,7 +16,6 @@ export async function POST(req: NextRequest) {
       stream: true
     });
 
-    // Create a TransformStream to process the response events
     const encoder = new TextEncoder();
     const { readable, writable } = new TransformStream();
     const writer = writable.getWriter();
